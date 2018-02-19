@@ -113,6 +113,7 @@ namespace TechJobs.Models
 
             List<string[]> rows = new List<string[]>();
 
+            //Path to csv file
             using (StreamReader reader = File.OpenText("Models/job_data.csv"))
             {
                 while (reader.Peek() >= 0)

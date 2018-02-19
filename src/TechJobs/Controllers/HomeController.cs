@@ -7,6 +7,7 @@ namespace TechJobs.Controllers
     {
         public IActionResult Index()
         {
+            //Creates a new dictionary to hold 
             Dictionary<string, string> actionChoices = new Dictionary<string, string>();
             actionChoices.Add("search", "Search");
             actionChoices.Add("list", "List");
