@@ -38,7 +38,7 @@ namespace TechJobs.Models
                 }
             }
 
-            // Bonus mission: sort results alphabetically
+            // Bonus mission: sort results alphabetically (sort job[column] values)
             values.Sort();
             return values;
         }
