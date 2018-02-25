@@ -40,7 +40,7 @@
             @foreach (KeyValuePair<string, string> job in jobDict)
             {
                     <tr>
-                        <td><strong>@job.Key.ToUpper():</strong></td>
+                        <td style="text-transform: capitalize;"><strong>@job.Key:</strong></td>
                         <td>@job.Value</td>
                     </tr>
             }
