@@ -41,11 +41,21 @@
             {
                     <tr>
                         <td style="text-transform: capitalize;"><strong>@job.Key:</strong></td>
-                        <td>@job.Value</td>
+                        @if (job.Key == "name") 
+                        {
+                            <td>@job.Value</td>
+
+                        }
+                        @if (job.Key != "name")
+                        {
+                        <td><a asp-controller="List" asp-action="Jobs" asp-route-column= "@job.Key" asp-route-value="@job.Value">@job.Value</a></td>
+                        }
                     </tr>
             }
         </table>
     }
 }
+
+
 
 
