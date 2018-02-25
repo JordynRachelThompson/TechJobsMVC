@@ -1,7 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-color: #ffffff
+    background-color: whitesmoke; 
 }
 
 /* Wrapping element */
@@ -67,3 +67,4 @@ table.job-listing td:last-child {
 label {
     margin-right: 15px;
 }
+
