@@ -3,18 +3,28 @@
 <h3>@ViewBag.jobs.Count Result(s)</h3>
 
 @{
-// TODO #3 - Use the same list display from Views/Search/Index.cshtml
+    // TODO #3 - Use the same list display from Views/Search/Index.cshtml
 
     @foreach (Dictionary<string, string> jobDict in ViewBag.jobs)
     {
         <table class="job-listing">
             @foreach (KeyValuePair<string, string> job in jobDict)
             {
-                    <tr>
-                        <td style="text-transform: capitalize;"><strong>@job.Key:</strong></td>
-                        <td class="capitalize">@job.Value</td>
-                    </tr>
+                <tr>
+                    <td style="text-transform: capitalize;"><strong>@job.Key:</strong></td>
+                    @if (job.Key == "name")
+                    {
+                    <td>@job.Value</td>
+                    }
+                    @if(job.Key != "name")
+                    {
+                        <td><a asp-controller="List" asp-action="Jobs" asp-route-column="@job.Key" asp-route-value="@job.Value">@job.Value</a></td>
+                    }
+                </tr>
             }
-         </table>
-        }
+        </table>
+    }
 }
+
+
+
